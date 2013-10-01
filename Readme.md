@@ -2,9 +2,9 @@ This is a very simple and basic webapp that saves your health records in the for
 
 The main aim of this app is to familiarize ourselves with some of the web technologies.
 
-This app uses node.js on the server side and uses MongoDB as a DB. On the client side we use HTML,CSS,Javascript,Jquery,Bootstrap and AJAX.
+This app uses node.js, mustachejs (used for templating) on the server side and uses MongoDB as a DB. On the client side we use HTML,CSS,Javascript,Jquery,Bootstrap and AJAX.
 
-Once you download the files here you will need to install Node.js, MongoDB, Expressjs and Mongoosejs.
+Once you download the files here you will need to install Node.js, MongoDB, Expressjs, Mongoosejs and Mustachejs.
 
 Once this is done just go to the home directory of this app and run this command
 
