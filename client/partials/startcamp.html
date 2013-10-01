@@ -1,0 +1,90 @@
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-lg-offset-3" id="dataupload">
+	
+	<h3>Upload Data</h3> <br/><br/>
+	<label>Tags</label>&nbsp;
+	<span class="glyphicon glyphicon-tags"></span>
+	<br/>      
+      <input type="text" class="form-control" id="tags" name="tags" placeholder="Enter tags here seperated by a comma(,)" >
+    <br/>
+	Eg: Apollo Hospital,Dr Khanna,Eye Surgery
+    <br/><br/>
+
+	<label>Family Member(s)</label><br/>
+                 
+                  <select class="form-control" id="fammemsel">
+			<option  value='{{name}}'>Me</option>                  
+                  {{#fam}}
+                  <option  value={{names}}>{{names}}</option>                  
+                  {{/fam}}
+                 </select>   
+		<br/><br/>
+      <label for="exampleInputFile">Upload Image/Document</label>
+	<div id="uploadmore">
+      <input type="file" id="file" name="file" ><br/></div>
+	<!-- <button class="btn btn-default" type="submit" onclick="uploadMore()" >Upload More</button>-->
+    <br/><br/>
+	
+	
+    <button id="submit" class="btn btn-default" onclick="makeajaxcall()">Save</button>
+
+  
+
+	</div>	
+</div>
+</div>
+<script type="text/javascript">
+
+function makeajaxcall()
+	{
+		$("#submit").prop('disabled',true);
+		var tags = $("input#tags").val();
+		var selfem = $("#fammemsel").val();
+		var file_data = $("#file").prop("files")[0];
+		var form_data = new FormData();		
+		form_data.append("file",file_data);
+		form_data.append("tags",tags);
+		form_data.append("selfam",selfem);
+		$.ajax({
+			type:'POST',
+			url: "http://localhost:8080/savedocuments",
+			data:form_data,
+			contentType:false,
+			processData:false,
+			cache:false,
+			dataType:"text",
+			success:callback,
+			error:err
+		});
+	}
+
+	function callback(msg,status)
+	{
+		if(status=="success")
+		{
+			
+			var temp = "<div class=\"alert alert-dismissable alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> <strong>Saved successfully</strong></div>";
+			$(temp).prependTo("#dataupload");
+			$("#submit").prop('disabled',false);
+			$("input#tags").val('');
+			$("input#fammemsel").val('');
+			$("input#file").val('');
+		}
+		else
+		{
+				
+		}
+	}
+	function err()
+	{
+		
+	}
+
+
+	function uploadMore()
+	{
+		var temp = "<input type=\"file\" id=\"file\" name=\"file\"><br/>";	
+		$(temp).appendTo("#uploadmore");		
+	}
+</script>

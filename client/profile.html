@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hfolio | Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <!-- Bootstrap -->
+    <link href="client/lib/bootstrap3/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+	
+	<style type="text/css">
+	.container
+	{
+		height:100%
+	}
+	html,body
+	{
+		height:80%
+	}
+	#profilepanel
+	{
+		height:100%
+	}
+	#titlebar
+	{
+		background-color:seagreen;
+	}
+	</style>
+  </head>
+  <body>
+	<div class="row" id="titlebar">
+	<br/> 
+	<div class="col-lg-9">
+		<div class="col-lg-3">
+		<img src="client/img/Healthfolio_03.png" alt="" height="7%" width="14%">
+		</div>
+		
+		
+	 </div>
+	  <div class="col-lg-3">
+	<ul class="nav nav-pills">
+		<li><a href="home"><span class="glyphicon glyphicon-home" style="color:white"></span></a></li>  		
+		<li><a href="profile" style="color:white">{{name}}</a></li>
+		<li><a href="logout"><span class="glyphicon glyphicon-log-out" style="color:white"></span></a></li>
+  
+</ul>
+</div>
+</div>
+<br/>
+<div class="container">
+	  
+  
+	<div class="row">
+		<div class="col-lg-12">	
+		<h2>About Me</h2><hr/>
+		<br/><br/>
+
+	<label>Name</label>&nbsp;&nbsp;&nbsp;{{name}}<label class="col-lg-offset-1">Age</label>&nbsp;&nbsp;&nbsp;{{age}}<label class="col-lg-offset-1">Gender</label>&nbsp;&nbsp;&nbsp;{{gender}}<label class="col-lg-offset-1">Bloodgroup</label>&nbsp;&nbsp;&nbsp;{{bloodgroup}}<br/>
+	<br/><br/>
+	<p>{{about}}</p>
+	</div>
+	</div>
+	</div>
+
+	
+    <script src="client/lib/bootstrap3/dist/js/jquery.js"></script>
+    
+    <script src="client/lib/bootstrap3/dist/js/bootstrap.js"></script>
+
+	 
+	</script>
+  </body>
+</html>

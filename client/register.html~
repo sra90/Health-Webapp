@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hfolio | Registration </title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+ 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <!-- Bootstrap -->
+    <link href="client/lib/bootstrap3/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+	  <style type="text/css">
+                html{
+   
+      			  background-color:#29ABE2;
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+        }
+	body
+	{
+		background:transparent;
+		
+	}
+	.panel
+	{
+		background-color: rgba(255,255,255,0.9);
+	}
+	
+        </style>
+
+</head>
+<body>
+
+<div class="row">
+	<br/>	
+	
+		<div class="col-lg-3 col-lg-offset-1">
+		<img src="client/img/Healthfolio_03.png" alt="" height="7%" width="14%">
+		</div>
+		
+	 
+	  <div class="col-lg-5 col-lg-offset-3">
+	<ul class="nav nav-pills">
+  		<li><a href="#" style="color:black"><b>About</b></a></li> 
+		<li><a href="#" style="color:black"><b>How It Works</b></a></li>
+		<li><a href="#" style="color:black"><b>Blog</b></a></li>
+		<li><a href="#" style="color:black"><b>Contact Us</b></a></li>
+	</ul>
+	</div>
+		</div>
+		<hr/>
+<div class="container">
+	
+	<div class="row">
+	<div class="col-lg-6 col-lg-offset-3 panel">
+		<h4 style="text-align:center"><strong>Sign Up</strong></h4><br/>
+      <div  class="form" style="text-align:center">
+    		<form class="form-horizontal" id="contactform" method="post" action="/registered"> 
+			<br/>
+			<div class="form-group">
+    			<label class="col-lg-3 control-label">Name</label>
+			<div class="col-lg-7">
+    			<input class="form-control" id="name" name="name" placeholder="First and last name" required="" type="text"> 
+			</div>
+			</div>			
+			
+			<div class="form-group">
+    			<label for="email" class="col-lg-3 control-label">Email</label>
+			<div class="col-lg-7">
+    			<input class="form-control" id="email" name="email" placeholder="example@domain.com" required="" type="email"> 
+			</div>
+			</div>
+		
+      
+    			 <div class="form-group">
+                <label for="password" class="col-lg-3 control-label">Create Password</label>
+			<div class="col-lg-7">
+    			<input class="form-control" type="password" id="password" name="password" required="" placeholder="Password"> 
+			</div>
+               </div>
+		<div class="form-group">
+                 <label class="col-lg-3 control-label">Age</label>
+		<div class="col-lg-2">
+                 <input class="form-control" type="number" name="age" id="age" required="" min="0">
+		</div>
+                  </div>
+               
+		           	<div class="form-group">		
+  		<label class="col-lg-3 control-label" style="position:relative;bottom:5pt">Gender</label>
+	
+		  <div class="col-lg-2">
+		    <input type="radio" name="gender" id="male" value="male" checked>
+		  <label> Male </label> 
+			</div>
+		  <div class="col-lg-2">
+		    <input type="radio" name="gender" id="female" value="female">
+		   <label> Female </label>
+			</div>
+		</div>
+	    
+            	<div class="form-group">
+		<label class="col-lg-3 control-label">Blood Group</label>
+		<div class="col-lg-2">
+		<input class="form-control" type="text" id="bloodgroup" name="bloodgroup" required=""> &nbsp;&nbsp;&nbsp;
+		</div>
+		</div>
+		
+            <button class="btn btn-default" type="submit">Sign Me Up</button>
+		<br/><br/>
+		
+   </form>
+</div>
+</div>
+</div>
+</div>
+	<script src="client/lib/bootstrap3/dist/js/jquery.js"></script>
+    
+    <script src="client/lib/bootstrap3/dist/js/bootstrap.js"></script>
+</body>
+</html>
+
