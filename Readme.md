@@ -1,4 +1,4 @@
-This is a very simple and basic webapp that saves your health recodrs in the form of images and helps to categorize the records for your family as well as dsiplay them using a simple search mechanism. We need to tag each image when we upload it so that it helps us search for them quicker.
+This is a very simple and basic webapp that saves your health records in the form of images and helps to categorize the records for your family as well as dsiplay them using a simple search mechanism. We need to tag each image when we upload it so that it helps us search for them quicker.
 
 The main aim of this app is to familiarize ourselves with some of the web technologies.
 
@@ -15,3 +15,4 @@ Now your server is running in port 8080. If you want to change to port number ju
 Now just go to the browser and type http://localhost:8080/
 
 Your application should be running now. Go ahead and explore it.
+Kindly note there may be bugs here as this app is just to help us learn how to use some of the technologies used.Kindly do not use spaces before or after the comma(,) while tagging or searching.
