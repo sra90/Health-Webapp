@@ -16,3 +16,5 @@ Now just go to the browser and type http://localhost:8080/
 
 Your application should be running now. Go ahead and explore it.
 Kindly note there may be bugs here as this app is just to help us learn how to use some of the technologies used.Kindly do not use spaces before or after the comma(,) while tagging or searching.
+
+Note: You may need to make some changes if you are using the latest npm packages.
